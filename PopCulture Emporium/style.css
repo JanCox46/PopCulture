@@ -1,0 +1,359 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  color: #EEE;
+  background-color: #333;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 25rem;
+  background-color: #0F0F0F;
+}
+
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1.5rem;
+}
+
+header .title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+header .icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  gap: 0.25rem;
+}
+
+header .icons li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+header .icons li:hover {
+  background-color: #EEE3;
+}
+
+.banner-section {
+  position: relative;
+  width: 100%;
+}
+
+.banner-section img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.banner-section .content  {
+  position: absolute;
+  top: 14.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0.5rem;
+  padding: 3rem 2rem 1.5rem;
+  border: 2px solid #EEE;
+}
+
+.banner-section .content .title {
+  position: absolute;
+  top: -2rem;
+  padding: 0 0.5rem;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(0.25rem);
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.25;
+  text-shadow: 0.1rem 0.1rem 0.1rem #0005;
+}
+
+.banner-section .content .description {
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.product-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 2.1rem 1.2rem;
+}
+
+.product-section .main-image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 0.45rem;
+}
+
+.product-section .carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  overflow-x: none;
+}
+
+.product-section .carousel .secondary-image {
+  width: calc((100% / 3) - 0.5rem);
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 0.35rem;
+  cursor: pointer;
+}
+
+/* Product */
+.product .info-banner {
+  padding-left: 0.5rem;
+  border-left: 3px solid #E70000;
+  font-size: 1rem;
+}
+
+.product .title {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.product .price-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.price-section .price {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.price-section .favorite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.price-section .favorite:hover {
+  background-color: #E7000030;
+}
+
+.product .buy-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.buy-section .quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #E70000;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.quantity button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 3rem;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.buy-section .add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.8rem 1.5rem;
+  color: inherit;
+  background-color: #E70000;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.product .info-section {
+  margin-top: 2rem;
+}
+
+.info-section .title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.info-section .info-table {
+  margin-top: 1rem;
+  width: 100%;
+  border: 1px solid #EEE;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.info-table tr {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #EEE;
+}
+
+.info-table tr:last-child {
+  border-bottom: none;
+}
+
+.info-table td {
+  padding: 0.5rem;
+  width: 100%;
+  text-align: left;
+}
+
+.info-table tr:nth-child(odd) {
+  background-color: #111;
+}
+.info-table tr:nth-child(even) {
+  background-color: #D70000;
+}
+
+.product .description-section {
+  margin-top: 2rem;
+}
+
+.description-section .title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.description-section .description {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+footer .socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  width: 100%;
+  background-color: #D70000;
+}
+
+footer .title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+footer .icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  gap: 0.4rem;
+}
+
+footer .icons li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+footer .icons li:hover {
+  background-color: #EEE5;
+}
+
+footer .links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  gap: 0.75rem;
+  padding-block: 1rem;
+}
+
+footer .links li a {
+  color: #EEE;
+  font-size: 1.35rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer .links li a:hover {
+  text-decoration: underline;
+}
+
+footer .second-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+footer .copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1.5;
+}
